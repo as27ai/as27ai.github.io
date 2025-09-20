@@ -201,7 +201,7 @@ h3 {
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, rgba(56, 189, 248, 0.5), rgba(14, 165, 233, 0.15)),
-    url("assets/title image.png")
+    url("assets/css/title image.png")
       center / cover;
   box-shadow: var(--shadow);
   border: 1px solid rgba(148, 163, 184, 0.25);
