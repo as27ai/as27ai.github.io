@@ -25,6 +25,7 @@
           <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">🌗</button>
       </div>
     </header>
 
@@ -142,5 +143,26 @@
     <script>
       document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
+    
+    <script>
+  // Restore last choice
+  (function () {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  })();
+
+  document.querySelector('.theme-toggle').addEventListener('click', () => {
+    const html = document.documentElement;
+    const light = html.getAttribute('data-theme') === 'light';
+    if (light) {
+      html.removeAttribute('data-theme');
+      localStorage.removeItem('theme');
+    } else {
+      html.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+
   </body>
 </html>
