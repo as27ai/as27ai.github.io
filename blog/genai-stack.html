@@ -44,16 +44,16 @@
               A four-layer view—<strong>Silicon/AI accelerators</strong>, <strong>Infrastructure/Cloud</strong>,
               <strong>Platform &amp; Models</strong>, and <strong>Applications</strong>—best explains how capability turns into value.
               Most of the ongoing cost of an LLM API call sits in compute (GPUs/TPUs), not software OPEX. This puts outsized
-              economics at the silicon layer. :contentReference[oaicite:1]{index=1}
+              economics at the silicon layer.
             </p>
 
             <h2>2) How major players position across the stack</h2>
             <ul>
-              <li><strong>Google</strong>: vertically integrated (TPU → GCP → Gemini → Workspace).</li>
-              <li><strong>Meta</strong>: consumer reach + open source (Llama, MTIA chips).</li>
-              <li><strong>AWS</strong>: infra-first with custom silicon (Trainium) to reduce NVIDIA dependency.</li>
-              <li><strong>Microsoft</strong>: breadth across stack (Azure, OpenAI partnership, Copilot).</li>
-              <li><strong>NVIDIA</strong>: “picks &amp; shovels” provider dominating accelerators &amp; CUDA ecosystem. :contentReference[oaicite:2]{index=2}</li>
+              <li><strong>Google</strong>: Vertically integrated (TPU → GCP → Gemini → Workspace)</li>
+              <li><strong>Meta</strong>: consumer reach + open source (Llama, MTIA chips)</li>
+              <li><strong>AWS</strong>: infra-first with custom silicon (Trainium) to reduce NVIDIA dependency</li>
+              <li><strong>Microsoft</strong>: breadth across stack (Azure, OpenAI partnership, Phi, Copilot)</li>
+              <li><strong>NVIDIA</strong>: “picks &amp; shovels” provider dominating accelerators &amp; CUDA ecosystem</li>
             </ul>
 
             <h2>3) Why NVIDIA captures the most value (for now)</h2>
@@ -72,6 +72,35 @@
                 significant codebase overhaul; developer ecosystem locks hyperscalers and enterprises into NVIDIA compatible workflows
               </li>
             </ul>
+            <p>
+              While NVIDIA’s current position is dominant, sustainability is not guaranteed:
+            </p>
+              <ul>
+                <li>
+                  <strong>Model efficiency gains</strong>: in the future incremental capability gains may not require proportional
+                  increase in GPU compute; new optimization techniques could reduce FLOPs per inference
+                </li>
+                <li>
+                  <strong>Custom silicon competition</strong>: hyperscalers and chip focused start-ups (e.g., Samba Nova) are investing
+                  capital to reduce NVIDIA dependency and capture cost efficiency
+                </li>
+                <li>
+                  <strong>Data center cyclicality</strong>: : hyperscalers may pause capex cycles once initial capacity is filled; demand
+                  partly driven by catch-up infra build and may normalize post 2026
+                </li>
+                <li>
+                  <strong>Regulatory risks</strong>: export controls (e.g., China) and supply chain constraints
+                </li>
+              </ul>
+
+            <p>
+              NVIDIA controls the scarcest and most non-substitutable layer—compute accelerators. As the foundational model gains
+              plateau and app margins tighten, its role in powering inference with increased demand (i.e., reasoning models,
+              more workloads) ensures sustained profitability. Hyperscalers (AWS, GCP, Azure, OCI) are deploying GB200s globally,
+              signaling sustained medium-term growth. Rising cash reserves enable investment in next-gen GPUs (e.g., Blackwell
+              architecture), manufacturing capacity, and vertical expansion via DGX Cloud - cementing NVIDIA’s lead in silicon
+              and boosting profit capture across the stack
+            </p>
 
             <h2>4) Blurring boundaries across layers</h2>
             <p>
