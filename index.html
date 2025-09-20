@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aryan Shah | Engineer & Writer</title>
+    <meta
+      name="description"
+      content="Personal website for Aryan Shah featuring biography and curated blog posts on AI, ML, and technology."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="#" class="brand">Aryan Shah</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Engineer • Machine Learning Enthusiast • Writer</p>
+            <h1>Building human-centered AI products and sharing what I learn.</h1>
+            <p class="lead">
+              I am Aryan Shah, a software engineer focused on creating responsible AI
+              solutions. On this site you'll find my story and curated writings on
+              technology, leadership, and lifelong learning.
+            </p>
+            <div class="hero-cta">
+              <a class="button primary" href="#about">About me</a>
+              <a class="button secondary" href="#blog">Read the blog</a>
+            </div>
+          </div>
+          <div class="hero-image" role="presentation" aria-hidden="true">
+            <div class="portrait"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container about-content">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>From tinkering with circuits to architecting AI systems.</h2>
+          </div>
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>Who I am</h3>
+              <p>
+                I am a multidisciplinary engineer blending software craftsmanship with a deep
+                curiosity for intelligent systems. I love building products that balance
+                technical rigor with empathy for the people who use them.
+              </p>
+            </article>
+            <article class="about-card">
+              <h3>What I do</h3>
+              <p>
+                At my day job I design machine learning platforms that move research ideas
+                into production. Outside of work I explore product strategy, publish
+                technical tutorials, and mentor aspiring ML engineers.
+              </p>
+            </article>
+            <article class="about-card">
+              <h3>How I work</h3>
+              <p>
+                I believe the best teams are collaborative, data-informed, and
+                mission-driven. My process centers on clarifying the problem, iterating on
+                experiments, and communicating insights clearly.
+              </p>
+            </article>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">2024</span>
+              <p>Leading cross-functional initiatives to deploy trustworthy AI systems.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2022</span>
+              <p>Shipped a recommendation engine powering millions of daily experiences.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2019</span>
+              <p>Completed B.S. in Computer Science with a focus on machine learning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog" id="blog">
+        <div class="container blog-content">
+          <div class="section-heading">
+            <p class="eyebrow">Blog</p>
+            <h2>Recent writing on AI, product, and personal growth.</h2>
+            <p class="lead">
+              I publish essays and guides that demystify complex topics and share
+              lessons from building real-world AI systems. Here are a few favorites.
+            </p>
+          </div>
+
+          <div class="blog-grid">
+            <article class="blog-card">
+              <p class="blog-category">AI &amp; ML</p>
+              <h3><a href="#">Designing human-centered ML systems</a></h3>
+              <p>
+                A framework for aligning model objectives with user needs while balancing
+                performance, fairness, and interpretability.
+              </p>
+              <a class="text-link" href="#">Read more</a>
+            </article>
+            <article class="blog-card">
+              <p class="blog-category">Product Strategy</p>
+              <h3><a href="#">Turning research into product impact</a></h3>
+              <p>
+                Lessons learned from partnering with cross-functional teams to ship
+                machine learning features that customers love.
+              </p>
+              <a class="text-link" href="#">Read more</a>
+            </article>
+            <article class="blog-card">
+              <p class="blog-category">Career</p>
+              <h3><a href="#">The engineer's guide to lifelong learning</a></h3>
+              <p>
+                Tactics for staying curious, leveling up your skills, and building a body of
+                work that compounds over time.
+              </p>
+              <a class="text-link" href="#">Read more</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-content">
+        <div>
+          <h2>Let's stay in touch</h2>
+          <p>Reach out for collaborations, speaking engagements, or a friendly hello.</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:hello@aryanshah.dev">hello@aryanshah.dev</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/ashah661" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="current-year"></span> Aryan Shah. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
