@@ -372,28 +372,3 @@ h3 {
   }
 }
 
-
-/* hero container on blog pages: full width */
-.blog-post #post-hero .container {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0 1.25rem; /* keep a small side gutter */
-}
-
-/* main article wrapper: full width */
-.blog-post .about-content {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0 1.25rem; /* same gutter */
-}
-
-/* article body: no card chrome */
-.blog-post .about-text {
-  max-width: none;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  padding: 0; /* content already has the 1.25rem from .about-content */
-}
