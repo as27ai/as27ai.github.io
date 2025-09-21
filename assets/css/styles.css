@@ -234,12 +234,14 @@ h3 {
 }
 
 .portrait {
-  width: clamp(240px, 28vw, 320px);
-  aspect-ratio: 1;
+  /*width: clamp(240px, 28vw, 320px);
+  aspect-ratio: 1;*/
+  width: clamp(320px, 34vw, 560px);
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   /*background: linear-gradient(180deg, rgba(56, 189, 248, 0.5), rgba(14, 165, 233, 0.15)),
     url("../img/title-image.png")*/
-  background: url("../img/title-image.png") center / cover no-repeat;
+  background: url("../img/title-image.png") center top / cover no-repeat;
   box-shadow: var(--shadow);
   border: 1px solid rgba(148, 163, 184, 0.25);
 
