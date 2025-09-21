@@ -371,3 +371,37 @@ h3 {
     align-items: center;
   }
 }
+
+
+/* === Blog post layout (full-width, no card box) === */
+.blog-post #post-hero .container {
+  /* wider hero so the H1 and intro don’t feel boxed */
+  width: min(1200px, 95vw);
+  max-width: none;
+  padding: 0 1.25rem; /* a little breathing room at the edges */
+}
+
+.blog-post .about {
+  /* reduce vertical padding so content sits tighter under the hero */
+  padding: clamp(2rem, 4vw, 3rem) 0;
+}
+
+.blog-post .about-content {
+  width: min(1200px, 95vw);   /* wider reading width */
+  margin: 0 auto;
+}
+
+.blog-post .about-text {
+  /* remove the card look and allow the text to span the full post width */
+  max-width: none;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0 1.25rem;         /* small side padding so text doesn’t touch the edge */
+}
+
+/* Optional: slightly smaller H1 on post pages for nicer line length */
+.blog-post h1 {
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+}
+
