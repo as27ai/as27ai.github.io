@@ -110,6 +110,12 @@ h3 {
   border-bottom: 1px solid var(--border);
 }
 
+.header-right{
+  display:flex;
+  align-items:center;
+  gap: 1rem;        /* space between nav and toggle */
+}
+
 .header-content {
   display: flex;
   align-items: center;
