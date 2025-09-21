@@ -1,4 +1,4 @@
-# ashah661.github.io
+# as27ai.github.io
 
 Personal website for Aaryan Shah hosted on GitHub Pages. The site features an about section and a curated blog on AI
 
