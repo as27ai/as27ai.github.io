@@ -284,6 +284,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.75rem;
+  align-items: stretch; /* makes all cards equal height */
 }
 
 .blog-card {
@@ -293,10 +294,25 @@ h3 {
   padding: 2rem;
   box-shadow: var(--shadow);
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: column; /* stack content top-to-bottom */
+  justify-content: space-between; /* push "Read more" to bottom */
+  /*gap: 0.75rem;*/
+  gap: 1rem;
   transition: transform var(--transition), border-color var(--transition);
 }
+
+/*new addition*/
+.blog-card h3 {
+  margin-bottom: 0.75rem; /* tighter space below title */
+}
+.blog-card p {
+  flex-grow: 1; /* descriptions grow evenly */
+  margin-bottom: 1rem;
+}
+.blog-card .text-link {
+  margin-top: auto; /* forces "Read more" to bottom */
+}
+/*end new addition */
 
 .blog-card:hover,
 .blog-card:focus-within {
