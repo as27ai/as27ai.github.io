@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How hyperscalers are betting on custom silicon | Aaryan Shah</title>
+    <meta name="description" content="Custom chips are becoming the control point in GenAI. A look at how AWS, Azure, GCP, and Meta use in-house silicon to cut cost, improve performance/watt, and reduce dependence on merchant GPUs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+
+  <body class="blog-post">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="../index.html" class="brand">Aaryan Shah</a>
+        <div class="header-right">
+          <nav class="site-nav" aria-label="Primary">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#contact">Contact</a>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">🌗</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero" id="post-hero">
+        <div class="container">
+          <p class="eyebrow">Blog · AI Infrastructure</p>
+          <h1>How hyperscalers are betting on custom silicon</h1>
+          <p class="lead">
+            The rise of LLM-powered apps has put the compute layer in the spotlight. While NVIDIA’s GPUs remain indispensable “picks and shovels,” hyperscalers are doubling down on custom silicon—chips optimized for specific AI workloads—to reduce cost, improve efficiency, and secure long-term control over their AI futures.
+          </p>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section class="about">
+        <div class="container about-content">
+          <article class="about-text">
+
+            <h2>Summary</h2>
+            <p>
+              The rise of LLM-powered AI applications has put the compute layer of the GenAI stack in the spotlight. NVIDIA has become the face of this era, its GPUs acting as the “picks and shovels” of AI training and inference. But while NVIDIA’s GPUs remain indispensable, they are still general-purpose and costly. Hyperscalers are now doubling down on custom silicon—chips optimized for specific AI workloads—to reduce cost, improve efficiency, and secure long-term control over their AI futures.
+            </p>
+
+            <h2>Introduction: From GPUs to custom silicon</h2>
+            <p>
+              NVIDIA pioneered GPUs for rendering graphics, first powering video games with their parallel processing design. That same architecture, with high bandwidth memory and parallelism, proved ideally suited for training neural networks. Researchers and startups like OpenAI quickly adopted GPUs, making them the default for AI workloads.
+            </p>
+            <p>
+              The results have been extraordinary: NVIDIA now controls over 80% of AI accelerator share, and its revenues have soared since 2022. But as model performance begins to plateau and more of the world interacts with AI systems (ChatGPT, Perplexity, Claude, etc.), inference workloads are exploding. More GPUs are required not just for training, but to process billions of daily queries and tokens consumed by users.
+            </p>
+            <p>
+              Still, GPUs are general-purpose, and this generality comes at a cost. For hyperscalers operating at massive scale, the economics are clear: move toward custom silicon purpose-built for training and inference.
+            </p>
+
+            <h2>What is custom silicon?</h2>
+            <p>
+              Custom silicon refers to chips co-designed by hyperscalers with foundries or partners, optimized for their dominant workloads.
+            </p>
+            <p>Traditionally, chip development spans three phases:</p>
+            <ul>
+              <li><strong>Front-end design:</strong> system specification, architecture design, and logic design</li>
+              <li><strong>Back-end design:</strong> circuit design, physical design, physical verification, and sign-off</li>
+              <li><strong>Fabrication:</strong> lithography, packaging, die testing, post-silicon validation</li>
+            </ul>
+            <p>
+              With merchant silicon (e.g., NVIDIA GPUs, Intel CPUs), the vendor owns the end-to-end process. In custom silicon, hyperscalers influence or co-design front-end architecture, tailoring chips to their AI needs while relying on partners for back-end and manufacturing.
+            </p>
+
+            <h2>Why custom silicon?</h2>
+            <ul>
+              <li><strong>Cost at scale:</strong> GPUs are expensive; inference and training costs grow rapidly with usage. Custom chips allow hyperscalers to lower cost per token or training run by optimizing only for what they need.</li>
+              <li><strong>Vendor risk:</strong> relying solely on NVIDIA or AMD introduces supply, pricing, and roadmap risk. Custom chips reduce that dependence.</li>
+              <li><strong>Performance &amp; latency gains:</strong> custom ASICs are tuned for FLOPs/watt, memory hierarchy, and interconnects, enabling lower latency, better performance, and higher efficiency.</li>
+              <li><strong>Strategic differentiation:</strong> owning silicon helps hyperscalers offer differentiated cloud services, reduce unit costs, and capture more margin across the AI stack.</li>
+            </ul>
+
+            <h2>What hyperscalers are doing</h2>
+
+            <h3>Amazon (AWS / Bedrock)</h3>
+            <p>
+              AWS has been a leader in deploying custom silicon, with Inferentia for inference and Trainium for training. Its latest Trainium2 delivers ~4× performance over Trainium1 and is already powering Anthropic’s Haiku and other workloads inside Bedrock. AWS positions custom silicon as a cost-efficient complement to NVIDIA GPUs.
+            </p>
+            <ul>
+              <li><strong>Custom silicon roadmap:</strong> Trainium2 for training, Inferentia2 for inference, cluster-scale deployments like Project Rainier.</li>
+              <li><strong>Strategy:</strong> lower $/FLOP, reduce dependency on NVIDIA, offer differentiated AI instance tiers across Bedrock.</li>
+              <li><strong>2025 CapEx:</strong> ~$100B, with ~$86B estimated toward AWS data centers and AI infrastructure.</li>
+            </ul>
+
+            <h3>Microsoft (Azure)</h3>
+            <p>
+              Microsoft introduced Maia (AI accelerator) and Cobalt (Arm CPU) to reduce reliance on merchant silicon and better integrate hardware with Azure’s systems. Maia accelerates training and inference for internal workloads (OpenAI, Copilot, Bing) while Cobalt boosts efficiency for general compute.
+            </p>
+            <ul>
+              <li><strong>Custom silicon roadmap:</strong> Maia accelerators + Cobalt CPUs; integrated “silicon to systems” approach in Azure.</li>
+              <li><strong>Strategy:</strong> control latency and cost for internal AI workloads; reduce GPU dependence on NVIDIA and AMD; build differentiated Azure AI services.</li>
+              <li><strong>2025 CapEx:</strong> ~$80B for AI infrastructure and data centers.</li>
+            </ul>
+
+            <h3>Google (Alphabet / Google Cloud)</h3>
+            <p>
+              Google’s TPU program is the most mature among hyperscalers. The Trillium (TPU v6) delivers major performance-per-watt gains, while the Axion CPU (custom Arm chip) supports AI-adjacent workloads. These power both Google’s own products (Search, Gemini, YouTube) and external customers on GCP.
+            </p>
+            <ul>
+              <li><strong>Custom silicon roadmap:</strong> TPU v6 “Trillium” + Axion Arm CPU.</li>
+              <li><strong>Strategy:</strong> end-to-end vertical integration; optimize AI efficiency for both internal services and GCP customers.</li>
+              <li><strong>2025 CapEx:</strong> ~$85B, heavily directed at AI chips, servers, and data centers.</li>
+            </ul>
+
+            <h3>Meta</h3>
+            <p>
+              Meta’s MTIA chips target inference for its internal workloads (recommendations, ranking, ads). MTIA 2i (gen-2) is optimized for Meta’s core applications, running alongside a massive fleet of NVIDIA GPUs.
+            </p>
+            <ul>
+              <li><strong>Custom silicon roadmap:</strong> MTIA 2i inference accelerators, integrated into hybrid fleets.</li>
+              <li><strong>Strategy:</strong> lower cost and energy consumption for large internal workloads; retain GPUs for demanding training jobs.</li>
+              <li><strong>2025 CapEx:</strong> ~$64–72B, with AI infra as the dominant spend.</li>
+            </ul>
+
+            <h2>What does the future hold?</h2>
+
+            <h3>Reduced dependence on NVIDIA and AMD</h3>
+            <p>
+              Hyperscalers are intentionally building vertically integrated stacks—from chips to data centers to software—to lessen reliance on merchant silicon. This shift allows them to control supply, optimize end-to-end performance, and lock in competitive edge. Over time, custom silicon will power the majority of internal workloads (e.g., Search, Ads, Copilot, Recommendations), ensuring that hyperscalers aren’t constrained by GPU availability or pricing cycles.
+            </p>
+
+            <h3>Custom silicon for third-party customers</h3>
+            <p>
+              Beyond internal savings, hyperscalers are beginning to expose custom silicon as cloud SKUs to external customers. By offering pricing discounts or superior efficiency on custom silicon instances (e.g., AWS Trainium vs. NVIDIA H100 instances), they can nudge customer adoption while reducing their own cost of service. Pricing becomes a lever not only to drive migration but also to differentiate service tiers across latency, performance, and cost sensitivity.
+            </p>
+
+            <h3>Rise of new specialized players</h3>
+            <p>
+              The market is opening space for new entrants focused solely on AI-optimized compute. Companies like Groq, with their Language Processing Units (LPUs), are pioneering architectures tuned specifically for inference speed and token throughput. Over time, more startups will emerge targeting niches such as low-latency inference, agent-based workloads, or ultra-efficient edge deployment—intensifying competition in what was once a GPU-only market.
+            </p>
+
+            <h3>NVIDIA and AMD at the cutting edge</h3>
+            <p>
+              Despite these shifts, merchant GPU vendors will continue to dominate bleeding-edge AI training and workloads requiring maximum flexibility. NVIDIA’s H100/B200/GB200 and AMD’s MI300 series remain unmatched for state-of-the-art model training and broad developer ecosystem support (CUDA, ROCm). Inference for complex, frontier-scale models will also remain GPU-heavy in the medium term, ensuring that NVIDIA and AMD retain the high-margin, high-performance segment of the market.
+            </p>
+
+            <hr />
+            <p>
+              <em>The views and opinions expressed in this blog are solely my own and do not necessarily reflect those of any organization I am affiliated with.</em>
+            </p>
+            <p><a class="text-link" href="../index.html#blog">← Back to all posts</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="container footer-content">
+        <div>
+          <h2>Let's stay in touch!</h2>
+          <p>Reach out for collaborations, thought partnership, brainstorming ideas, conversations on AI, or a game of chess 😄</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:aaryanshah661@gmail.com">E-mail</a>
+          <a href="https://www.linkedin.com/in/shahaaryan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="current-year"></span> Aaryan Shah. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      // Restore last theme choice
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      })();
+
+      // Toggle theme
+      document.querySelector('.theme-toggle').addEventListener('click', () => {
+        const html = document.documentElement;
+        const isLight = html.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          html.removeAttribute('data-theme');
+          localStorage.removeItem('theme');
+        } else {
+          html.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+  </body>
+</html>
