@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Data Infrastructure with VAST | Aaryan Shah</title>
+    <meta name="description" content="Why AI-ready data infrastructure matters, how VAST Data approaches the problem, who benefits, and what the future of AI data layers looks like." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+
+  <body class="blog-post">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="../index.html" class="brand">Aaryan Shah</a>
+        <div class="header-right">
+          <nav class="site-nav" aria-label="Primary">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#contact">Contact</a>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">🌗</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="post-hero">
+        <div class="container">
+          <p class="eyebrow">Blog · AI Data Infrastructure</p>
+          <h1>AI Data Infrastructure with VAST</h1>
+
+          <!-- Preface directly under title -->
+          <div class="post-preface">
+            <p><strong>Preface.</strong> Every enterprise today is racing to embed AI into products, operations, and decision-making. But while AI models often grab the headlines, the hidden enabler is the data infrastructure beneath them—the foundation that allows AI to run reliably, at scale, and in production.</p>
+            <p>VAST Data has emerged as one of the most visible architects of this infrastructure. In this blog, I’ll explore how VAST is tackling this challenge, why it’s distinct, and what kinds of organizations might benefit from this next-generation architecture.</p>
+          </div>
+
+          <!-- Summary section before Introduction -->
+          <div class="post-summary">
+            <strong>Summary:</strong> AI’s bottleneck is increasingly the data layer, not just the model. VAST Data proposes a unified, high-throughput foundation that collapses file, object, vector, and transactional access into one system designed to feed GPUs/accelerators at scale—reducing I/O latency, simplifying pipelines, and cutting total cost of ownership. If your org is hitting data starvation, governance sprawl, or hybrid complexity as AI moves from prototype to production, a unified data fabric like VAST can be the difference between demos and durable, enterprise-wide AI.
+          </div>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section class="about">
+        <div class="container about-content">
+          <article class="about-text">
+            <h2>Introduction</h2>
+            <p>To understand AI data infrastructure, think of the AI stack as layers: models and algorithms sit on top, but beneath them lie compute, storage, and data orchestration layers. That “plumbing” is often overlooked, yet it makes or breaks real-world AI deployments.</p>
+            <p>In the early days, storage and databases sufficed. But with AI workloads—particularly large-scale deep learning, multi-modal models, and real-time agents—traditional systems struggle. The trends reshaping this layer include:</p>
+            <ul>
+              <li>Massive volume growth of unstructured data (video, sensor, text)</li>
+              <li>Demand for low-latency access across distributed datasets (edge, cloud, on-prem)</li>
+              <li>Tight coupling between storage and GPUs/accelerators (to avoid I/O bottlenecks)</li>
+              <li>Need for unified data pipelines across structured, unstructured, and vector embeddings</li>
+            </ul>
+            <p>AI infrastructure is now becoming a revolutionary battleground—the difference between prototypes and mission-critical, scalable AI systems.</p>
+
+            <h2>What does VAST do?</h2>
+            <h3>Company background</h3>
+            <p>VAST Data is an AI infrastructure company founded in 2016 valued at ~$9B. It has scaled rapidly, backed by major investors like NVIDIA, Dell, and others. Its mission is to reinvent how data is stored, accessed, and delivered for AI and high-performance computing workloads.</p>
+
+            <h3>What problem is VAST solving?</h3>
+            <p>VAST addresses a cluster of foundational issues:</p>
+            <ul>
+              <li><strong>Fragmented infrastructure:</strong> separate silos for files, object stores, databases, and vector stores.</li>
+              <li><strong>Performance bottlenecks:</strong> models starved of data due to slow I/O and metadata latency.</li>
+              <li><strong>Lifecycle complexity:</strong> hybrid cloud, edge, on-prem, and varied formats complicate consistency and governance.</li>
+              <li><strong>Cost inefficiency:</strong> multiple tiers, data duplication, and redundant systems drive up TCO.</li>
+            </ul>
+            <p>VAST views these as symptoms of an underlying architectural gap—and its platform is designed to collapse those silos and eliminate performance drag.</p>
+
+            <h3>Core offerings (what VAST provides)</h3>
+            <ul>
+              <li><strong>Unified data layer:</strong> a single namespace spanning file, object, vector, and transactional data.</li>
+              <li><strong>High-performance throughput:</strong> engineered for GPU workloads, with direct-storage access, RDMA, and metadata scaling.</li>
+              <li><strong>Edge-to-cloud integration:</strong> seamless operation across edge sites, on-prem clusters, and cloud regions.</li>
+              <li><strong>Support for AI &amp; agentic workflows:</strong> semantic embedding, vector search, agent orchestration, and real-time inference pipelines.</li>
+              <li><strong>Data governance &amp; security:</strong> multi-tenant, permission-aware access, audit trails, and encryption.</li>
+            </ul>
+            <p>These components combine to let enterprises push AI from lab to production with fewer infrastructure surprises.</p>
+
+            <h2>How is VAST different from others?</h2>
+            <h3>Competing players</h3>
+            <ul>
+              <li>Legacy storage vendors (Pure Storage, NetApp, Dell)</li>
+              <li>Cloud providers and object stores (AWS S3, Azure Blob)</li>
+              <li>Data lake / lakehouse platforms (Databricks, Snowflake, Delta Lake)</li>
+              <li>HPC / vector storage specialists (WEKA, DDN, etc.)</li>
+            </ul>
+
+            <h3>What makes VAST disruptive?</h3>
+            <ul>
+              <li><strong>Architecture rethink:</strong> disaggregated shared-everything (DASE) decouples compute from storage so both scale independently.</li>
+              <li><strong>Deep integration with compute:</strong> built to feed GPUs directly, minimizing data movement and maximizing throughput.</li>
+              <li><strong>One system for many workloads:</strong> collapses vector + file + object into a single system.</li>
+              <li><strong>Real-world deployments:</strong> already operating at scale across cities, research, and media—beyond slideware.</li>
+            </ul>
+            <p>Simply put, VAST is trying to define what the AI data layer should look like, rather than iterating on what came before.</p>
+
+            <h2>Does your enterprise need something like VAST?</h2>
+            <p>Here are three levers you can test to see if this class of infrastructure would benefit your organization:</p>
+            <ul>
+              <li><strong>AI training &amp; inference bottlenecks.</strong> If models are starved of data, suffer I/O latency, or fail to scale with more GPUs, a unified high-throughput infrastructure can unlock multiplier gains.</li>
+              <li><strong>Legacy data modernization.</strong> If you’re managing file servers, object stores, and databases as silos and struggling to consolidate pipelines for AI, VAST offers a reset.</li>
+              <li><strong>Enterprise-wide AI at scale.</strong> If your vision is agentic AI across departments (security, ops, customer service), you need a common data fabric underpinning everything.</li>
+            </ul>
+            <p>If two or more of these apply, an AI-native data infrastructure is not just nice-to-have—it becomes essential.</p>
+
+            <h2>VAST in the spotlight</h2>
+            <h3>NVIDIA keynote &amp; recognition</h3>
+            <p>At COMPUTEX 2025, NVIDIA CEO Jensen Huang spotlighted VAST Data during his keynote, showcasing how VAST’s platform integrates with NVIDIA AI-Q to support real-time, multimodal AI agents.</p>
+            <p>In the demo, VAST + NVIDIA demonstrated how enterprise AI agents can reason over structured and unstructured data with low-latency access, enabling dynamic agent orchestration across business operations.</p>
+            <p>This public recognition underscores that VAST is more than just storage—it’s core infrastructure for GPU-driven AI systems.</p>
+
+            <h3>Select case studies</h3>
+            <ul>
+              <li><strong>Lambda (GPU cloud provider):</strong> chose the VAST Data Platform to power its on-demand GPU cloud, enabling high-performance AI workloads, multi-tenant support, and scalable model training environments.</li>
+              <li><strong>xAI &amp; the Colossus cluster:</strong> VAST powers the data platform for xAI’s Colossus cluster in Memphis (100k+ NVIDIA GPUs), managing massive data flow for frontier-scale training.</li>
+              <li><strong>Unified AI for smarter city operations:</strong> city-scale video + sensor integration with agentic AI for real-time detection and autonomous response.</li>
+              <li><strong>MITRE + NVIDIA Federal AI Sandbox:</strong> VAST underpins a secure, multi-tenant environment for federal AI experimentation and modeling.</li>
+              <li><strong>Other notable cases:</strong> Pixar (render &amp; creative AI), NCSA (open science workloads), and biomedical institutions scaling genomic pipelines.</li>
+            </ul>
+            <p>These case studies show that VAST has actively deployed their architecture with a proven track record.</p>
+
+            <h2>Remarks</h2>
+            <p>VAST’s core proposition is powerful, but there are still some questions to consider. To persuade enterprises to depart from incumbent storage providers, VAST must:</p>
+            <ul>
+              <li>Simplify “why it matters” per buyer persona (e.g., “If your AI models are waiting for data, VAST fixes that”).</li>
+              <li>Clarify fit (e.g., it makes sense for GPU-dense customers like xAI and Lambda).</li>
+              <li>Quantify cost of delay and opportunity risk (e.g., “teams on legacy storage lost weeks to inefficiency”).</li>
+              <li>Use vertical narratives (auto, public sector, video) rather than generic infra talk.</li>
+              <li>Show TCO comparisons vs. traditional systems.</li>
+              <li>Build confidence via third-party benchmarks and transparent performance data.</li>
+            </ul>
+            <p>In a sense, enterprise AI adoption will pivot not on model quality, but on whether the data plumbing is ready. VAST is aggressively defining that plumbing for the AI era.</p>
+
+            <hr />
+            <p><em>The views and opinions expressed in this blog are solely my own and do not necessarily reflect those of any organization I am affiliated with.</em></p>
+            <p><a class="text-link" href="../index.html#blog">← Back to all posts</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="container footer-content">
+        <div>
+          <h2>Let's stay in touch!</h2>
+          <p>Reach out for collaborations, thought partnership, brainstorming ideas, conversations on AI, or a game of chess 😄</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:aaryanshah661@gmail.com">E-mail</a>
+          <a href="https://www.linkedin.com/in/shahaaryan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="current-year"></span> Aaryan Shah. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      // restore last theme choice
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      })();
+      // theme toggle
+      document.querySelector('.theme-toggle').addEventListener('click', () => {
+        const html = document.documentElement;
+        const isLight = html.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          html.removeAttribute('data-theme');
+          localStorage.removeItem('theme');
+        } else {
+          html.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+
+    <!-- Source: :contentReference[oaicite:0]{index=0} -->
+  </body>
+</html>
